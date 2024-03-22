@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY METHOD</title>
+</head>
+
+<body>
+    <h1>ARRAY METHOD</h1>
+
+    <script>
+        //concat
+        const array1 = [1, 2, 3];
+        const array2 = [4, 5, 6];
+        const vowel = ["A", "E", "I"];
+        const concatenatedArray = array1.concat(array2, vowel);
+
+        console.log(concatenatedArray);
+
+        //copyWithin
+
+        //array.copyWithin(target, start, end)
+        //target: The index at which to copy the sequence to.
+        //start: The index at which to start copying elements from.
+        //  end(optional): The index at which to end copying elements from.If not specified, copyWithin() will copy until the end of the array.
+
+        const vowels = ["a", "e", "i", "o", "u"];
+        vowels.copyWithin(2, 0, 2);
+        console.log(vowels);
+        //entries
+        const array = ['apple', 'bat', 'cat'];
+
+        const iterator = array.entries();
+
+        console.log(iterator.next().value);
+        console.log(iterator.next().value);
+        console.log(iterator.next().value);
+        console.log(iterator.next().value); // Output: undefined (no more elements)
+
+        //for each
+        const a = [1, 2, 3, 4, 5, 6, 7, 8];
+        a.forEach((index, number) => {
+            console.log(index + " " + number);
+        });
+
+        // map
+        const ar = [10, 20, 30, 40, 50, 60];
+        const newAr = ar.map(number => {
+            return number * 2;
+        })
+        console.log(ar) // original ar
+        console.log(newAr) // ar*2
+
+        //filter
+        const fil = [10, 20, 30, 40, 50, 60];
+        const fil1 = [15, 30, 45, 60]
+        const filter = fil.filter(number => {
+            return number > 40;
+        })
+
+        console.log(filter)
+
+        //find
+        const fi = [10, 20, 30, 40, 50, 60];
+
+        const find = fi.find(number => {
+            return number > 40;
+        })
+
+        console.log(find);
+
+        //some
+        const so = [10, 20, 30, 40, 50, 60];
+
+        const some = so.some(number => {
+            return number > 40;
+        })
+
+        console.log(some);
+
+        //every
+        const ev = [10, 20, 30, 40, 50, 60];
+
+        const every = ev.every(number => {
+            return number > 40;
+        })
+
+        console.log(every);
+
+        //reduce
+        const item = [
+            { price: 10 },
+            { price: 50 },
+            { price: 40 },
+            { price: 30 },
+            { price: 45 },
+            { price: 47 },
+            { price: 55 },
+        ]
+
+        const total =item.reduce((sum, item) => {
+            return sum+item.price;
+        }, 0 )
+
+        console.log(total);
+
+        //flat
+        const n =[10, 20, 30, 40, 50,[60,70,80, [90,100]]];
+        const flatArray =n.flat();
+        console.log(n);
+        console.log(flatArray);
+
+        //flat map
+        const word =["hello word, how are you"];
+        const map = word.flatMap(word=> word.split(''));
+        console.log(word);
+        console.log(map);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

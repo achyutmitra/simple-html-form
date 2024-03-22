@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCHOOL ADMISSION FORM</title>
+
+    <style>
+        .div {
+            background-color: darkseagreen;
+        }
+
+        .button {
+            text-align: center;
+            background-color: chartreuse;
+            color: rgb(5, 5, 5);
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        <form>
+            <fieldset>
+                <h1>SCHOOL ADMISSION FORM</h1>
+                <label for="name">NAME: <input type="text"></label>
+                <br>
+                <br>
+                <label for="fname">FATHERS-NAME <input type="text" placeholder="enter your father name"></label>
+                <br>
+                <br>
+                <label for="mname">MOTHERS-NAME <input type="text"></label>
+                <br>
+                <br>
+                <td>GENDER</td>
+                <select name="GENDER" id="">
+                    <option>MALE</option>
+                    <option>FE-MALE</option>
+                </select>
+                <br>
+                <br>
+                <td>DATE OF BIRTH</td>
+                <input type="date">
+                <br>
+                <br>
+
+                <label for="catagory">CATAGORY:</label>
+                <input type="radio" value="UR" name="CATEGORY" /> UR
+                <input type="radio" value="SC" name="CATEGORY" /> SC
+                <input type="radio" value="ST" name="CATEGORY" /> ST
+                <input type="radio" value="OBC" name="CATEGORY" /> OBC
+                <input type="radio" value="O" name="CATEGORY" /> OTHER
+
+            </fieldset>
+        </form>
+
+        <button class="button">SUBMIT</button>
+    </div>
+</body>
+
+</html>

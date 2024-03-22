@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>User Generate a Random Number Between Two Numbers</title>
+</head>
+<body>
+    <h1>User Generate a Random Number Between Two Numbers</h1>
+
+    <script>
+
+     // with out user input
+    //  function getRandomNumber(min, max) {
+    //     // Generate a random decimal between 0 (inclusive) and 1 (exclusive)
+    //     let randomDecimal = Math.random();
+
+    //     // Scale the random decimal to fit within the range of (max - min),
+    //     // then add min to ensure the number is within the specified range
+    //     let randomNum = randomDecimal * (max - min) + min;
+
+    //     // Round down to the nearest integer to ensure it's an integer within the range
+    //     return Math.floor(randomNum);
+    // }
+
+    // // Example usage:
+    // let min = 10;
+    // let max = 20;
+    // let randomNumber = getRandomNumber(min, max);
+    // console.log(`Random value between ${min} and ${max} is ${randomNumber}`);  
+
+
+        //user input
+
+        function getRandomNumber(min, max) {
+                let randomDecimal = Math.random();
+                let randomNum = randomDecimal * (max - min) + min;
+                return Math.floor(randomNum);
+            }
+
+            let minInput = parseFloat(prompt("Enter the minimum number:"));
+            let maxInput = parseFloat(prompt("Enter the maximum number:"));
+
+            // Check if the user input is valid numbers
+            if (isNaN(minInput) || isNaN(maxInput)) {
+                console.log("Please enter valid numbers for min and max.");
+            } else if (minInput >= maxInput) {
+                console.log("Please make sure min is less than max.");
+            } else {
+                let randomNumber = getRandomNumber(minInput, maxInput);
+                console.log(`Random value between ${minInput} and ${maxInput} is ${randomNumber}`);
+            }
+
+        
+    </script>
+</body>
+</html>

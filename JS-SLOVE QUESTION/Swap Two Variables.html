@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program to Swap Two Variables</title>
+</head>
+
+<body>
+    <h1>Swap Two Variables</h1>
+
+    <script>
+
+        let a = parseFloat(prompt("Enter the value for variable a:"));
+        let b = parseFloat(prompt("Enter the value for variable b:"));
+        
+        console.log("Before swapping:");
+        console.log("a =", a);
+        console.log("b =", b);
+
+        a = a + b;
+        b = a - b;
+        a = a - b;
+
+        console.log("After swapping:");
+        console.log("a =", a);
+        console.log("b =", b);
+
+    </script>
+</body>
+
+</html>
